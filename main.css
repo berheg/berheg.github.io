@@ -1,0 +1,46 @@
+ h1 {
+    text-align: center;
+}
+.myimage {
+   margin-left:40%;
+}
+img {
+    float: left;
+    width: 100px;
+   height: 100px;
+   margin-right: 20px;
+}
+.name {
+    margin-left: 20px;
+    color: rgb(55, 0, 255);
+}
+.contact {
+    float: right;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 5rem;
+    color: #29627e;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+}
+.maincv{
+    margin-left: 20px;
+}
+footer {
+    align-content:center;
+    margin-left: 30%;    
+}
+a {
+    margin-left: 50px;
+    font-size: 40px;
+}
+p a{
+    font-size: 14px;
+    margin-left: 0px;
+}
+.work p{
+    font-weight: bold;
+}
+.work a{
+    font-size: 16px; 
+    margin-left: 0;   
+}
