@@ -106,20 +106,7 @@ footer{
         .footer-column h3{
             margin-bottom: 0px;
         }
-        /*--iframe style with in the footer-column---*/
-        .map-responsive{
-            overflow:hidden;
-            padding-bottom:56.25%;
-            position:relative;
-            height:0;
-        }
-        .map-responsive iframe{
-            left:0;
-            top:0;
-            height:200px;
-            width: 150px;
-            position:absolute;
-        }
+        /*--iframe style with in the footer-column---*/        
         iframe{
             width: 200px; 
             height: 150px;             
@@ -142,7 +129,7 @@ footer{
         text-anchor: 40px;
     }
 /*---Media Query for Mobile phone---*/
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 600px){
     /*---h1 of header style for mobil---*/
     header h1{
         margin-left: 0px;
@@ -191,6 +178,7 @@ footer{
         /*---footer-left style under footer---*/
         .footer-column #footer-left{
             margin-left: 20px;
+            align-content: center;
         }
         /*--iframe style with in the footer-column---*/
         .footer-column iframe{
