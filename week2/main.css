@@ -142,12 +142,12 @@ footer{
         /*--navbar style---*/   
         .navbar{
             flex-direction: column;
-            margin-left: auto;
-            align-content: center;    
+            margin-left: auto;               
         }/*----navbar ends----*/
     /*--container class inside the body and common to all inside its div style---*/
     .container{
         flex-direction: column;
+        align-content: center;
     }
         /*---item1 class inside the container style---*/
         .item1{
@@ -160,10 +160,15 @@ footer{
             width: 100%;
             align-content: center;
         }
+            /*---practical-order class style container---*/
+            .practical-order{
+                order: -1;
+            }
     /*---footer style common to all under footer---*/
     footer{         
         height: auto;  
-        flex-direction: column;              
+        flex-direction: column;
+        align-content: center;              
     }
         /*---footer-left style under footer---*/
         #footer-left{
