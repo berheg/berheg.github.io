@@ -105,7 +105,25 @@ footer{
         /*---h3 style under the class footer-column---*/  
         .footer-column h3{
             margin-bottom: 0px;
-        }   
+        }
+        /*--iframe style with in the footer-column---*/
+        .map-responsive{
+            overflow:hidden;
+            padding-bottom:56.25%;
+            position:relative;
+            height:0;
+        }
+        .map-responsive iframe{
+            left:0;
+            top:0;
+            height:200px;
+            width: 150px;
+            position:absolute;
+        }
+        iframe{
+            width: 200px; 
+            height: 150px;             
+        }           
 
     /*---footer-left style under footer---*/
   #footer-left{
@@ -160,20 +178,25 @@ footer{
             width: 100%;
             align-content: center;
         }
-            /*---practical-order class style container---*/
-            .practical-order{
-                order: -1;
+            /*---practical-order id style container---*/
+            #practical-order{
+                order: -5;
             }
     /*---footer style common to all under footer---*/
     footer{         
         height: auto;  
         flex-direction: column;
         align-content: center;              
-    }
+    }  
         /*---footer-left style under footer---*/
-        #footer-left{
-            margin-left: 0px;
+        .footer-column #footer-left{
+            margin-left: 20px;
         }
+        /*--iframe style with in the footer-column---*/
+        .footer-column iframe{
+            width: 50%; 
+            height: 100px;             
+        }   
         /*---footer-right style under footer---*/
         #footer-right{
             margin-right: auto;
