@@ -177,8 +177,7 @@ footer{
         /*---footer-left style under footer---*/
         .footer-column #footer-left{
             margin-left: 20px;
-            padding-left: 20px;
-            align-content: center;
+            padding-left: 20px;            
         }
         /*--iframe style with in the footer-column---*/
         .footer-column iframe{
