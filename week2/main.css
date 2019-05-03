@@ -172,17 +172,17 @@ footer{
     /*---footer style common to all under footer---*/
     footer{         
         height: auto;  
-        flex-direction: column;
-        align-content: center;              
+        flex-direction: column;                  
     }  
         /*---footer-left style under footer---*/
         .footer-column #footer-left{
             margin-left: 20px;
+            padding-left: 20px;
             align-content: center;
         }
         /*--iframe style with in the footer-column---*/
         .footer-column iframe{
-            width: 50%; 
+            width: 80%; 
             height: 100px;             
         }   
         /*---footer-right style under footer---*/
