@@ -47,7 +47,7 @@ a {
     figure img{
         position: relative;
       height: 300px;
-      width: 100%;
+      width: 100%;      
       margin-top: 30px;
       margin-bottom: 30px;
     }/*----figure img ends*/
@@ -177,7 +177,7 @@ footer{
     }  
         /*---footer-left style under footer---*/
         .footer-column #footer-left{
-            position: absolute;
+            position: relative;
             margin-left: 10px;
             padding-left: 10px;
             align-items: center;            
@@ -191,6 +191,7 @@ footer{
         #footer-right{
             margin-right: auto;
             margin-left: 10px;
+            align-items: center;
         }     
 }   
         
