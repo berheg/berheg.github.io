@@ -45,6 +45,7 @@ a {
     }/*---Anchor common tag ends---*/
     /*-----img tag with in figure style begins----*/
     figure img{
+        position: absolute;
       height: 300px;
       width: 100%;
       margin-top: 30px;
@@ -157,7 +158,7 @@ footer{
         /*---item1 class inside the container style---*/
         .item1{
             width: auto;
-            margin-left: 0px;
+            margin-left: 10px;
             align-content: center;
         }
         /*---item class inside the container style---*/
