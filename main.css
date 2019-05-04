@@ -45,8 +45,9 @@ a {
     }/*---Anchor common tag ends---*/
     /*-----img tag with in figure style begins----*/
     figure img{
+        position: relative;
       height: 300px;
-      width: 100%;
+      width: 100%;      
       margin-top: 30px;
       margin-bottom: 30px;
     }/*----figure img ends*/
@@ -157,7 +158,7 @@ footer{
         /*---item1 class inside the container style---*/
         .item1{
             width: auto;
-            margin-left: 0px;
+            margin-left: 10px;
             align-content: center;
         }
         /*---item class inside the container style---*/
@@ -172,22 +173,29 @@ footer{
     /*---footer style common to all under footer---*/
     footer{         
         height: auto;  
-        flex-direction: column;
-        align-content: center;              
+        flex-direction: column; 
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        align-content: center;                        
     }  
         /*---footer-left style under footer---*/
         .footer-column #footer-left{
-            margin-left: 20px;
-            align-content: center;
+            position: relative;
+            margin-left: 10px;
+            padding-left: 10px;
+            align-items: center;            
         }
         /*--iframe style with in the footer-column---*/
         .footer-column iframe{
-            width: 50%; 
+            width: 80%; 
             height: 100px;             
         }   
         /*---footer-right style under footer---*/
         #footer-right{
-            margin-right: auto;
+            position: relative;
+            margin-right: auto;                    
+            align-items: center;
         }     
 }   
         
