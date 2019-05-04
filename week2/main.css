@@ -45,7 +45,7 @@ a {
     }/*---Anchor common tag ends---*/
     /*-----img tag with in figure style begins----*/
     figure img{
-        position: absolute;
+        position: relative;
       height: 300px;
       width: 100%;
       margin-top: 30px;
@@ -179,7 +179,8 @@ footer{
         .footer-column #footer-left{
             position: absolute;
             margin-left: 10px;
-            padding-left: 10px;            
+            padding-left: 10px;
+            align-items: center;            
         }
         /*--iframe style with in the footer-column---*/
         .footer-column iframe{
