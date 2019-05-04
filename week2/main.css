@@ -176,6 +176,7 @@ footer{
     }  
         /*---footer-left style under footer---*/
         .footer-column #footer-left{
+            position: relative;
             margin-left: 10px;
             padding-left: 10px;            
         }
