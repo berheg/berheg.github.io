@@ -184,7 +184,10 @@ footer{
             position: relative;
             margin-left: 10px;
             padding-left: 10px;
-            align-items: center;            
+            align-items: center;
+            justify-items: center;
+            align-content: center;
+            justify-items: center;            
         }
         /*--iframe style with in the footer-column---*/
         .footer-column iframe{
