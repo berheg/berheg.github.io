@@ -196,6 +196,7 @@ footer{
             position: relative;
             margin-right: auto;                    
             align-items: center;
+            justify-content: center;
         }     
 }   
         
