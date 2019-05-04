@@ -173,7 +173,8 @@ footer{
     /*---footer style common to all under footer---*/
     footer{         
         height: auto;  
-        flex-direction: column;                  
+        flex-direction: column; 
+        align-items: center;                 
     }  
         /*---footer-left style under footer---*/
         .footer-column #footer-left{
