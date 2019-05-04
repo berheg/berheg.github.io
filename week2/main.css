@@ -174,7 +174,8 @@ footer{
     footer{         
         height: auto;  
         flex-direction: column; 
-        align-items: center;                 
+        align-items: center;
+        align-content: center;                 
     }  
         /*---footer-left style under footer---*/
         .footer-column #footer-left{
