@@ -32,7 +32,7 @@ nav{
     margin-right: 200px;
     padding-top: 20px;  
 }
-
+/*Menu of the navigation bar style*/
 .navbar{
     display: flex;
     flex-direction: row;
@@ -40,6 +40,7 @@ nav{
     justify-items: center;
    padding-bottom: 30px;
 }
+/*form style for the whole pages*/
 form{
     width: 90%;
     align-items: center;
@@ -60,18 +61,12 @@ form{
     justify-content: center;
     justify-content: space-evenly;
 }
+/*Size of the input box modified*/
 .boxcontainer {
     margin-top: 20px;
     width: 200px;
     height: 30px;
     
-}
-.address{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-evenly;
 }
 .selectcountry{
     margin-top: 30px;
@@ -86,8 +81,7 @@ form{
 .navbottom{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    
+    justify-content: flex-end;    
     
 }
 textarea{
@@ -112,22 +106,18 @@ textarea{
     height: 30px;
     margin-top: 20px;
 }
-#optionalbox{   
-    position: relative;
-    border-color: blueviolet;
-}
-input[type=checkbox]:checked ~ #optionalbox{
-    position: absolute;
-    margin-top: -9999px;
-   margin-left: -9999px;
-}
-.shippling-toggle{
+.shipping-toggle{
     display: none;
 }
-input .chekboxtoggler:checked ~ shipping-optional{
-    display: none;
- }
- 
+ul{
+    list-style: none;
+}
+
+input[type=checkbox]:checked ~ .shipping-toggle {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;    
+  }
 
 a{
     text-decoration: none; 
@@ -145,7 +135,6 @@ button{
     flex-direction: column;
     align-items:  center;
     width: 50%;
-
 }
 #signup-phone{
     
@@ -187,4 +176,33 @@ button{
 .shoes img, .bag img, .jawellery img{
     width: 200px;
     height: 200px;
+}
+/*---Media Query for Mobile phone---*/
+@media only screen and (max-width: 600px){
+    body{
+        margin-left: auto;
+        width: 100%;        
+          
+    }
+    /*--Header for all pages*/
+    header{        
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    /*Menu of the navigation bar style*/
+    .navbar{   
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    /*-- part of the navigation section of all pages --*/
+nav{
+    width: auto;
+    height: auto;    
+    margin-right: auto;    
+}
+    /*form style for the whole pages*/
+    form{
+        width: 100%;        
+    }    
+
 }
