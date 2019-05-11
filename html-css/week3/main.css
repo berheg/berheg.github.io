@@ -32,7 +32,7 @@ nav{
     margin-right: 200px;
     padding-top: 20px;  
 }
-/*Menu of the navigation bar style*/
+
 .navbar{
     display: flex;
     flex-direction: row;
@@ -40,7 +40,6 @@ nav{
     justify-items: center;
    padding-bottom: 30px;
 }
-/*form style for the whole pages*/
 form{
     width: 90%;
     align-items: center;
@@ -61,12 +60,18 @@ form{
     justify-content: center;
     justify-content: space-evenly;
 }
-/*Size of the input box modified*/
 .boxcontainer {
     margin-top: 20px;
     width: 200px;
     height: 30px;
     
+}
+.address{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
 }
 .selectcountry{
     margin-top: 30px;
@@ -81,7 +86,8 @@ form{
 .navbottom{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;    
+    justify-content: flex-end;
+    
     
 }
 textarea{
@@ -115,18 +121,13 @@ input[type=checkbox]:checked ~ #optionalbox{
     margin-top: -9999px;
    margin-left: -9999px;
 }
-.shipping-toggle{
+.shippling-toggle{
     display: none;
 }
-ul{
-    list-style: none;
-}
-
-input[type=checkbox]:checked ~ .shipping-toggle {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;    
-  }
+input .chekboxtoggler:checked ~ shipping-optional{
+    display: none;
+ }
+ 
 
 a{
     text-decoration: none; 
@@ -144,6 +145,7 @@ button{
     flex-direction: column;
     align-items:  center;
     width: 50%;
+
 }
 #signup-phone{
     
