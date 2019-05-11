@@ -1,0 +1,133 @@
+<!--Home work for online sign up form-->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign up form</title>
+        <link rel="stylesheet" type="text/CSS" href="main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">  
+
+    </head>
+    <body>
+        <header>
+            <img src="../images/logo10.jpg" alt="Logo of the company"
+            />
+            <nav class="navbar">                    
+                <a href="#">Home</a>                
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Sign up</a>
+            </nav>
+        </header>    
+        <div>
+            <h1>Sign up to yourcustometailor.com</h1>
+        </div>    
+        <form action="form3.html" method="POST" class="form">
+            <div>
+                <h2>Step 2/4 - how can we reach you?</h2>
+                <progress value="1" max="4" class="progressbar"></progress>
+            </div>
+            <div>
+
+                <p>We will probably need to stay in touch somehow. Let us know how we can reach you?</p>                
+                <table class="lefttable">
+                    <tr class="form-item">                        
+                        <td><label for="singup-email">
+                                Email*
+                            </label>
+                        </td>
+                        <td><input
+                                type="email" required class="boxcontainer"                                
+                                id="singup-email"
+                                name="email"                          
+                            />
+                        </td>
+                    </tr>
+                    <tr class="form-item">
+                        <td><label for="singup-password">
+                                Password*
+                            </label>
+                        </td>
+                        <td><input
+                            type="password" required class="boxcontainer"
+                            min="10" pattern="[a-z][A-Z"
+                            id="singup-password"
+                            name="password"                          
+                            />
+                        </td>
+                    </tr>                
+                    <tr class="form-item">
+                        <td><label for="singup-conformpassword">
+                            Re-enter password*
+                            </label>
+                        </td>
+                        <td><input
+                            type="password" required class="boxcontainer"
+                            min="10" pattern="[a-z][A-Z"
+                            id="singup-conformpassword"
+                            name="conformpassword"                          
+                            />
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                        <tr class="form-item">
+                            <td><label for="singup-phone">
+                                    Phone
+                                </label>
+                            </td>
+                            <td>
+                                <input
+                                    type="text" class="boxcontainer"
+                                    id="singup-phone"
+                                    name="phone"                          
+                                />
+                            </td>
+                        </tr>
+                </table>                
+                <div class="newsletter">
+                    <p>I want to sign up for the newsletter</p>
+                    <table class="newscheckbox">
+                        <tr>
+                            <td><label for="singup-weeklynews">
+                                    Weekly news
+                                </label>
+                            </td>
+                            <td><input
+                                    type="checkbox" class="sizecheckbox" checked
+                                    id="singup-weeklynews"
+                                    name="weeklynews"                          
+                                />
+                            </td>
+                            <td><label for="singup-monthlynews">
+                                    Monthly news
+                                </label>
+                            </td>
+                            <td><input
+                                    type="checkbox" class="sizecheckbox"
+                                    id="singup-monthlynews"
+                                    name="monthlynews"                          
+                                />
+                            </td>
+                            <td><label for="singup-nonews">
+                                    Don't send me news
+                                </label>
+                            </td>
+                            <td><input
+                                    type="checkbox" class="sizecheckbox"
+                                    id="singup-nonews"
+                                    name="nonews"                          
+                                />
+                            </td> 
+                        </tr>
+                    </table>
+                </div>
+                <div class="navbottom">
+                    <button><a class="nextstep" href="form.html">back</a></button>
+                    <button class="nextstep">Next step</button>
+                </div>                    
+            </div>             
+        </form>
+    </body>
+</html>

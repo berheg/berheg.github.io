@@ -1,0 +1,148 @@
+<!--Home work for online sign up form-->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign up form</title>
+        <link rel="stylesheet" type="text/CSS" href="main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">  
+
+    </head>
+    <body>
+        <header>
+            <img src="../asset/images/logo10.jpg" alt="Logo of the company"
+            />
+            <nav class="navbar">                    
+                <a href="#">Home</a>                
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Sign up</a>
+            </nav>
+        </header>    
+        <div>
+            <h1>Sign up to yourcustometailor.com</h1>
+        </div>  
+        <form action="confirmation.html" method="GET" class="form">
+            <div>
+                <h2>Step 4/4 - how can we reach you?</h2>
+                <progress value="3.5" max="4" class="progressbar"></progress>
+            </div>
+            <div>
+                <p>Please fill in your payment data</p>
+                <table class="form-item">
+                    <tr>
+                        <td>                            
+                            <label for="singup-nameoncard">
+                                Name on Card*
+                            </label>
+                        </td>
+                        <td>
+                            <input
+                                type="text" required class="boxcontainer"                                
+                                id="singup-nameoncard"
+                                name="nameoncard"                          
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>                
+                            <label for="nameofcard">
+                                    Card type
+                            </label>
+                        </td>
+                        <td>
+                            <select name="nameofcard" id="nameofcard" class="boxcontainer">
+                                <option value="none"> </option>
+                                <option value="Master">Master card</option>
+                                <option value="visa">Visa card</option>
+                                <option value="cridt">Cridt Card</option>                          
+                            </select>              
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="singup-criditcardnumber">
+                                    Cridit card number*
+                            </label>
+                        </td>
+                        <td>
+                            <input
+                                type="text" required class="boxcontainer"
+                                pattern="[0-9]"
+                                minlength="16" maxlength="16"
+                                id="singup-criditcardnumber"
+                                name="criditcardnumber"                          
+                            />                               
+                        </td>
+                    <tr>
+                        <td>
+                            <label for="singup-firstname">
+                                First Name
+                            </label>
+                        </td>
+                        <td>
+                            <input
+                                type="text" required class="boxcontainer"
+                                id="singup-firstname"
+                                name="firstname"                          
+                            />
+                        </td>
+                    </tr>
+                </table>
+                <table class="lefttable">
+                    <tr>
+                        <td>
+                            <label for="singup-expairymonth">
+                                Expairy month*
+                            </label>
+                        </td>
+                        <td>
+                            <input
+                                type="number" required class="smallbox"
+                                id="singup-expairymonth"
+                                name="expairymonth"                          
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="singup-ccv">
+                                CCV*
+                            </label>
+                        </td>
+                        <td>
+                            <input
+                                type="number" required class="smallbox"
+                                pattern="[0-9]"
+                                minlength="3" maxlength="3"
+                                id="singup-ccv"
+                                name="ccv"                          
+                            />
+                        </td>
+                    </tr>                    
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="singup-expairyyear">
+                                Expairy Year*
+                            </label>
+                        </td>
+                        <td>
+                            <input
+                                type="number" required class="smallbox"
+                                id="singup-expairyyear"
+                                name="expairyyear"                          
+                            />
+                        </td>
+                    </tr>
+                </table>
+                <div class="navbottom">
+                    <button><a class="nextstep" href="form3.html">back</a></button>
+                    <button class="nextstep">Submit</button>
+                </div>                    
+            </div>             
+        </form>
+    </body>
+</html>
