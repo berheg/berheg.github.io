@@ -52,6 +52,19 @@ form{
 .progressbar{
     width: 90%;
     height: 30px;
+    animation-name: progressBar;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0.8;
+}
+@keyframes progressBar {
+    0% {
+        width: 100px;
+    }
+    
+    100% {
+        width: 100%;
+    }
 }
 .inputsection{
     display: flex;
