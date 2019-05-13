@@ -1,0 +1,205 @@
+/*---------Css code for about.html-----------'/
+/* ******************************************************
+Style Sheet for Hack Your Future, HTML-CSS, homework Week2 
+Designer: Girmay Hailu
+********************************************************* */
+/*---header style common to all under header---*/
+header{
+    background-color: rgba(250, 250, 250, 0.89);    
+    margin-top: 0px;     
+}
+    /*---h1 of header style---*/
+    header h1{
+        font-size: 30px;
+        padding-top: 50px;
+        margin-bottom: 0px;
+        margin-left: 200px;
+        }
+    /*---p of header style---*/
+    header p{
+        margin-top: 0px;
+        margin-top: 0%;
+        padding-bottom: 50px;
+        color: rgba(219, 219, 224, 0.788);
+        margin-left: 200px;
+        }/*---p of header style end----*/
+/*-----nav style commen to all under nav-----*/
+nav{
+    height: 15px;
+}
+    /*--navbar style---*/
+    .navbar{
+        display: flex;
+        margin-left: 200px;
+        flex-direction: row;    
+    }/*----navbar ends----*/
+/*-----Anchor tag style common to all classes---*/
+a {
+    text-align: center;
+    padding: 10px 16px;
+    color: rgb(12, 4, 4);
+    text-decoration: none;
+}
+    a:hover{
+      color: rgba(219, 219, 224, 0.788);
+    }/*---Anchor common tag ends---*/
+    /*-----img tag with in figure style begins----*/
+    figure img{
+        position: relative;
+      height: 300px;
+      width: 100%;      
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }/*----figure img ends*/
+/*--container class inside the body and common to all inside its div style---*/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+    /*---item1 class inside the container style---*/
+    .item1{
+        width: 30%;
+        margin-left: 200px;
+    }
+    /*---item class inside the container style---*/
+    .item{
+    width: 40%;
+    }
+        /*---logo class inside the item class style--*/
+        .logo{     
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            justify-content: flex-start;
+        }
+            /*---img under logo class style--*/
+            .logo img{
+                width: 90px;
+                height: 90px;
+            }
+/*---footer style common to all under footer---*/
+footer{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(105, 66, 247);
+    color: rgb(250, 249, 249);
+    align-content: center; 
+    flex-direction: row;
+    justify-content: center; 
+    justify-content: space-around;       
+}
+    /*--- anchor tag style under the footer to all sections---*/
+    footer a {
+        color: #fff;            
+    }
+    /*---footer-column class style under footer---*/     
+  .footer-column{            
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;  
+      margin-top: 40px;         
+    }
+        /*---h3 style under the class footer-column---*/  
+        .footer-column h3{
+            margin-bottom: 0px;
+        }
+        /*--iframe style with in the footer-column---*/        
+        iframe{
+            width: 200px; 
+            height: 150px;             
+        }           
+
+    /*---footer-left style under footer---*/
+  #footer-left{
+        margin-left: 100px;
+    }
+        /*--hack class style under the id footer-left---*/     
+        .hack{
+            margin-top: 0px;
+        }
+    /*---footer-right style under footer---*/
+  #footer-right{
+        margin-right: 100px;
+    }
+    /*---footer-archive class style under footer---*/
+    #footer-archive{
+        text-anchor: 40px;
+    }
+/*---Media Query for Mobile phone---*/
+@media only screen and (max-width: 600px){
+    /*---h1 of header style for mobil---*/
+    header h1{
+        margin-left: 0px;
+        align-content: center;
+    }
+    /*---p of header style---*/
+    header p{        
+        margin-left: 0px;
+        align-content: center;
+    }/*---p of header style end----*/
+    /*-----nav style commen to all under nav-----*/
+    nav{
+        height: auto;
+    }
+        /*--navbar style---*/   
+        .navbar{
+            flex-direction: column;
+            margin-left: auto;               
+        }/*----navbar ends----*/
+    /*--container class inside the body and common to all inside its div style---*/
+    .container{
+        flex-direction: column;
+        align-content: center;
+    }
+        /*---item1 class inside the container style---*/
+        .item1{
+            width: auto;
+            margin-left: 10px;
+            align-content: center;
+        }
+        /*---item class inside the container style---*/
+        .item{
+            width: 100%;
+            align-content: center;
+        }
+            /*---practical-order id style container---*/
+            #practical-order{
+                order: -5;
+            }
+    /*---footer style common to all under footer---*/
+    footer{         
+        height: auto;  
+        flex-direction: column; 
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        align-content: center;                        
+    }  
+        /*---footer-left style under footer---*/
+        .footer-column #footer-left{
+            position: relative;
+            margin-left: 10px;
+            padding-left: 10px;
+            align-items: center;
+            justify-items: center;
+            align-content: center;
+            justify-items: center;            
+        }
+        /*--iframe style with in the footer-column---*/
+        .footer-column iframe{
+            width: 80%; 
+            height: 100px;             
+        }   
+        /*---footer-right style under footer---*/
+        #footer-right{
+            position: relative;
+            margin-right: auto;                    
+            align-items: center;
+            justify-content: center;
+        }     
+}   
+        
