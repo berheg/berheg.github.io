@@ -5,7 +5,7 @@ Designer: Girmay Hailu
 ********************************************************* */
 /*--body for all pages--*/
 body{
-    margin-left: 300px;
+    margin-left: 200px;
     width: 80%;
     justify-content: center;
       
@@ -50,7 +50,7 @@ form{
     align-content: center;
 }
 .progressbar{
-    width: 90%;
+    width: 70%;
     height: 30px;
     animation-name: progressBar;
     animation-duration: 2s;
