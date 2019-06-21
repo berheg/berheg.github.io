@@ -1,0 +1,10 @@
+div{
+    width: 600px;
+    height: 200px;
+    margin-left: 200px;
+}
+p{
+    font: bold;
+    font-size: 20px;
+    text-align: center;
+}

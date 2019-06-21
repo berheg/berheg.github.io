@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <title>Movies</title>
+    </head>
+    
+    <body> 
+        <header>Sample Result Of movies.js</header>       
+        <div class="resultDisplay">
+            <select name="resultDisplay">
+                <option value="none">-----Select to see sample results----</option>
+                <option value="shortTitle">Number of movies with title length less or equal 2:</option>
+                <option value="longTitle">Number of movies with title length greater than or equal to 50:</option>
+                <option value="givenYear">Number of movies year between 1980-1989 inclusive:</option>
+                <option value="moviesKey">Movies with key words 'surfer', 'alien','benjamin' are</option>
+                <option value="dupWord">Movies with duplicate words in the title:</option>
+                <option value="rating">The average of movies rating rounding to integer is:</option>
+                <option value="good">The number of Movies with with Good rating:</option>
+                <option value="average">The number of Movies with with Average rating:</option>
+                <option value="bad">The number of Movies with with Bad rating:</option>
+            </select>    
+            <section class="display">
+                <p class="display"></p>
+                <ul></ul>
+            </section>       
+        </div>      
+        
+             
+        <script src="movies.js"></script>
+    </body>
+</html>

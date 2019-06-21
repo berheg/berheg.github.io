@@ -1,0 +1,22 @@
+header{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    
+}
+h1{
+    text-align: center;
+}
+select{
+    height: 30px;
+    align-self: center;
+}
+section{
+    justify-content: center;
+}
