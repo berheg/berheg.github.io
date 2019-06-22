@@ -150,18 +150,18 @@ function showSelectedValue(){
             p.innerHTML = 'Movies with key words' + '"surfer",' + '"alien",' + '"benjamin"' + ' are: ' + moviesHaveKeywords.length;
             sampleDisplay(moviesHaveKeywords);
         }else if(select.value === "dupWord"){
-            p.innerHTML = moviesDuplicateWords.length;
+            p.innerHTML = 'Movies with duplicate words in the title: ' + moviesDuplicateWords.length;
             sampleDisplay(moviesDuplicateWords);
         }else if(select.value === "rating"){
             p.innerHTML = 'The average of movies rating rounding to integer is: ' + Math.round(averageOfMovieRating);            
         }else if(select.value === "good"){
-            p.innerHTML = moviesGoodRating.length;
+            p.innerHTML = 'The number of Movies with with Good rating:' + moviesGoodRating.length;
             sampleDisplay(moviesGoodRating);
         }else if(select.value === "average"){
-            p.innerHTML = moviesAverageRating.length;
+            p.innerHTML = 'The number of Movies with with Average rating:' + moviesAverageRating.length;
             sampleDisplay(moviesAverageRating);
         }else if(select.value === "bad"){
-            p.innerHTML = moviesBadRating.length;
+            p.innerHTML = 'The number of Movies with with Bad rating:' + moviesBadRating.length;
             sampleDisplay(moviesBadRating);
         }           
         
