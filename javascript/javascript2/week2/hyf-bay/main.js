@@ -92,7 +92,7 @@ const sortOption = {
 };
 input.addEventListener('input',function(){ 
     clearList(ul);
-    clearList(listCart);
+    //clearList(listCart);
     const productsToRender = availableProducts.filter(function(product){
         productName =  product.name.toLowerCase();
         inptutValue =  input.value.toLowerCase();
