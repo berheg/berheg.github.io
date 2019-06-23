@@ -91,7 +91,8 @@ const sortOption = {
     Cheap: 'cheap'
 };
 input.addEventListener('input',function(){ 
-    clearList(ul); 
+    clearList(ul);
+    clearList(listCart);
     const productsToRender = availableProducts.filter(function(product){
         productName =  product.name.toLowerCase();
         inptutValue =  input.value.toLowerCase();
