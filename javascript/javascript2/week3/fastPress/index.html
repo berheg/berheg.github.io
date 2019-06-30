@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css">  
+  </head>
+  <body>
+    <div class="main">
+      <h3>Fastest Presser</h3>
+      <p class="remainder"></p>
+      Set time: <input type="number" class="setTime">     
+      <p class="display"></p>
+      <button class="gameStart">Start Game!</button>
+      <button class="restart">Restart</button>
+      <div class="clickSection">
+            
+          <section class="firstSec" id="first-canvas">
+            <canvas id="myConfetti"></canvas>
+            <p class="clickdisplay"></p>
+            <p class="countDisplay"></p>
+            
+          </section>
+        
+        
+          <section class="secondSec" id="second-canvas"> 
+            <canvas id="confetti"></canvas>       
+            <p class="secondClickDisplay"></p>
+            <p class="countTwoDisplay"></p>
+          
+          </section>
+      
+      </div>    
+    </div>
+    <script src="confetti.js"></script>
+    <script src='main.js'></script>
+  </body>
+</html>
