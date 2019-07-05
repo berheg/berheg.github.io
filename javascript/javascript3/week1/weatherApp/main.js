@@ -22,28 +22,28 @@ function geoFindMe() {
             });
             const city = input.value; 
             
-                const api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f1a35cc23798d7dcbfd21e71968ac4d6&units=metric`;
-                fetch(api)
-                .then(response => response.json())            
-                .then(json =>{
-                    console.log(`${json}`);
-                    if(`${json.code}`=== undefined){
-                        h2.innerText = json.message;
-                    }            
-                    else{
-                        temp = Math.round(json.main.temp);
-                        console.log(json);            
-                        h2.innerText = `${city}`;
-                        parCurrentTemp.innerHTML = temp + '°<span>C</span>';
-                        weatherIcon = json.weather[0].icon;
-                        icon.innerHTML = `<img src="icons/${weatherIcon}.png"/>`;
-                        parDescription.innerHTML = json.weather[0].description;
-                        console.log(temp);
-                        console.log(weatherIcon);
-                        console.log(json.weather[0].description);
-                    }
-                    
-                });
+            const api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f1a35cc23798d7dcbfd21e71968ac4d6&units=metric`;
+            fetch(api)
+            .then(response => response.json())            
+            .then(json =>{
+                console.log(`${json}`);
+                if(`${json.code}`=== undefined){
+                    h2.innerText = json.message;
+                }            
+                else{
+                    temp = Math.round(json.main.temp);
+                    console.log(json);            
+                    h2.innerText = `${city}`;
+                    parCurrentTemp.innerHTML = temp + '°<span>C</span>';
+                    weatherIcon = json.weather[0].icon;
+                    icon.innerHTML = `<img src="icons/${weatherIcon}.png"/>`;
+                    parDescription.innerHTML = json.weather[0].description;
+                    console.log(temp);
+                    console.log(weatherIcon);
+                    console.log(json.weather[0].description);
+                }
+                
+            });
             
         } 
         function error() {
@@ -121,7 +121,8 @@ function showError(error){
 
 // GET WEATHER FROM API PROVIDER
 function getWeather(latitude, longitude){
-    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+    const proxy = "https://cors-anywhere.herokuapp.com/" 
+    let api = `${proxy}http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
     fetch(api)
         .then(function(response){
