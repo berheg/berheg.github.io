@@ -1,0 +1,41 @@
+{
+    "computers": 
+        [
+            {
+			"name": "dell",
+			"processer": ["intel i3", "intel i5", "intel i7", "celeron", "AMD"],
+			"speed": [4.8, 4.2, 4.1, 4.0, 3.9, 3.8, 3.6]
+		    },
+		    {
+                "name": "apple",
+                "processer": ["intel", "celeron"],
+                "speed": [4.8, 4.2, 4.1, 4.0, 3.9, 3.8, 3.6]
+            }
+	    ],
+	"numbers": [2, 4, 5, 6, 8],
+	"pets": ["cat", "dog"],
+    "music": 
+    {
+		"title": "Ethiopia",
+        "artist": 
+        [   
+            {
+                "name": "Tilahun",
+                "age": 60,
+                "language": "amharic"
+            },
+            {
+                "name": "Teddy",
+                "age": 60,
+                "language": "amharic"
+            },
+            {
+                "name": "Michael",
+                "age": 60,
+                "language": "English"
+            }
+		]
+
+	}
+
+}

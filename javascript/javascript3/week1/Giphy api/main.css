@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+  }
+h1{
+  text-decoration: bisque;
+  font-family: fantasy;
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 50px;
+}
+#searchBtn{
+  width: 250px;
+  height: 80px;
+  background-color: aqua;
+  text-decoration: chocolate;
+  font-family: sans-serif;
+  font-size: 30px;
+  margin-left: 40%;
+}
+.searchInput{
+  width: 300px;
+  height: 80px;
+  margin-left: 38%;
+  text-align: center;
+}
+.notice{
+  width: 40%;
+  height: 50px;
+  background-color: darkgoldenrod;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 30%;
+}
