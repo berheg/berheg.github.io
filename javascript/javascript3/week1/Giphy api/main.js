@@ -1,3 +1,6 @@
+/*Searching a word gives gif images and can be specified 
+how many gif images you want before or after search
+*/
 const searchBtn = document.getElementById("searchBtn");
 const img = document.getElementById("ans-img");
 const imageContainer = document.querySelector('div.imageContainer');
@@ -5,7 +8,9 @@ const searchInput = document.querySelector('input.searchInput');
 const numImages = document.querySelector('input.numInput');
 let notice = document.querySelector('p.notice');
 const key = "Xe7GmIA81Tx5vLjHznMmWwJxuWxUQYb9";
+//urlArray is used to save the Json data object from api fetch
 let urlArray = [];
+//Json object is fetch and the data is passed to showImages function
 function getImage() {
   if(searchInput.value===''){
     notice.innerHTML = 'Please insert value below!!!!';  
@@ -16,21 +21,18 @@ function getImage() {
     fetch(api)
       .then(resp => resp.json())
       .then(json => {
+        //json object is passed to be displayed and manupilate as we want
         showImages(json);
         console.log(json);               
         console.log(json.data[0].images.fixed_height.url);        
       });
   }    
 } 
-searchInput.addEventListener('keyup', removeNotice);
-searchInput.addEventListener('focus', removeSearchValue);
-//searchInput.addEventListener('blur', showSearchInputPlaceHolder);
-searchBtn.addEventListener("click", getImage);
-//numImages.addEventListener('focus', removeInputValue);
-numImages.addEventListener('blur', showImagesWithLimit);
+//remove innetHtml of paragraph notice
 function removeNotice(){
   notice.innerHTML = ''
 };
+//showImages function saves the object as array and displays as image
 function showImages(objJson){
     urlArray = objJson.data.map(
     obj => obj.images.fixed_height.url);
@@ -46,26 +48,37 @@ function showImages(objJson){
     }
   
 }
+//removes search input value when we need
 function removeInputValue(){
   numImages.value = ''
 }
+//removes search value
 function removeSearchValue(){
   searchInput.value ='';
 }
-/*function showPlaceHolder(){
-  showImages();
-}*/
+//displays specified number of images 
 function showImagesWithLimit(){
-  removeItems(imageContainer);
-  for( i=0; i < numImages.value;i++){
-    const image = document.createElement("img");
-    image.setAttribute("src", urlArray[i]);
-    imageContainer.appendChild(image);
-  
-  }
+  if(numImages.value){
+    removeItems(imageContainer);
+    for( i=0; i < numImages.value;i++){
+      const image = document.createElement("img");
+      image.setAttribute("src", urlArray[i]);
+      imageContainer.appendChild(image);
+
+    }
+  }  
 }
+//removes images from the screen when we need
 function removeItems(item) {
   while (item.firstChild) {
     item.removeChild(item.firstChild);
   }
-} 
+}
+//searchInput keyup listener
+searchInput.addEventListener('keyup', removeNotice);
+//searchInput onfocus listener
+searchInput.addEventListener('focus', removeSearchValue);
+//search button click listener
+searchBtn.addEventListener("click", getImage);
+//numImages input blur listener
+numImages.addEventListener('blur', showImagesWithLimit); 
