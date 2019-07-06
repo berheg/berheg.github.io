@@ -1,0 +1,20 @@
+{
+    "cities":
+    [
+
+        
+        {
+            "name": "LondonSample",
+            "coord":{"lat":25, "long":55},
+            "temp": 0,
+            "Icon": "02d",
+            "wind": {"speed": 10, "deg":20},
+            "description": "few clowds",
+            "sunrise": 156453,
+            "sunset": 1234567
+        }
+        
+        
+        
+    ]
+}

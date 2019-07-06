@@ -99,4 +99,15 @@ body {
     text-align: center;
     font-size: 0.8em;
 }
+.sunset{
+    margin-right: 280px;
+}
+/*---Media Query for Mobile phone---*/
+@media only screen and (max-width: 600px){
+    body{
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+    }
+}
   
