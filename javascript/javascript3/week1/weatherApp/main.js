@@ -153,6 +153,7 @@ const locationElement = document.querySelector(".location p");
 const notificationElement = document.querySelector(".notification");
 const sunrise = document.querySelector('#sunrise');
 const sunset = document.querySelector('#sunset');
+const windP = document.querySelector('#wind');
 // App data
 const weather = {};
 
@@ -220,6 +221,7 @@ function displayWeather(){
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
+    windP.innerHTML = "Wind: " + weather.wind + "m/s"
     sunrise.innerHTML = "Sunrise:" + convertTime(weather.sunrise);
     sunset.innerHTML = "Sunset:" + convertTime (weather.sunset);
 }
