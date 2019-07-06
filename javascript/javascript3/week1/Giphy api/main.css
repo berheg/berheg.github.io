@@ -22,21 +22,32 @@ h1{
   text-decoration: chocolate;
   font-family: sans-serif;
   font-size: 30px;
-  margin-left: 40%;
+  align-self: center;
 }
 .searchInput{
-  width: 300px;
-  height: 80px;
-  margin-left: 38%;
+  width: 200px;
+  height: 50px;
+  align-self: center;
   text-align: center;
 }
 .notice{
   width: 40%;
-  height: 50px;
-  background-color: darkgoldenrod;
+  height: 50px;  
   text-align: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 40px;
   font-weight: bold;
   margin-left: 30%;
+  z-index: -2;
+}
+.imageContainer{
+  width: 30%;
+  height: 200px;
+  align-self: center;
+}
+.numInput{
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  align-self: center;
 }

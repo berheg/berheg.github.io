@@ -12,14 +12,17 @@
   </head>
 
   <body>
-    <div id="app">      
+    <div id="app" class="container">      
       <h1 id="ans-title">Giphy Searcher</h1>
-      <p class="notice"></p>
-      <input type="text" class="searchInput"></input>
-      <button id="searchBtn">Search for gif</button>
-      <img id="ans-img" alt="" />
+      <section>
+          <p class="notice"></p>
+      </section>
+      
+      <input type="text" class="searchInput" placeholder="Enter word"></input>
+      <button id="searchBtn">Search gifs</button>
+      <input type="text" class="numInput" placeholder="Number of gifs"></input>
+      <div class="imageContainer"></div>
     </div>
-
     <script src="main.js"></script>
   </body>
 </html>
