@@ -12,7 +12,9 @@ const input = document.querySelector('input.city');
 const icon = document.querySelector('section.icon');
 const parDescription = document.querySelector('p.description');
 const localSearchBtn = document.querySelector('#localSearchBtn');
-const saveDataBtn = document.querySelector('#saveDataBtn')
+const saveDataBtn = document.querySelector('#saveDataBtn');
+const savedLocal = document.querySelector('#savedLocal');
+let data = {};
 //
 function getCityWeather() {    
     mapLink.href = '';
@@ -24,6 +26,10 @@ function getCityWeather() {
             parCurrentTemp.innerHTML = '';
             icon.innerHTML = '';
             parDescription.innerHTML = '';
+            parSunrise.innerHTML = '';
+            parSunset.innerHTML = '';
+            parWind.innerHTML = '';
+            savedLocal.innerHTML = '';
         });
         const city = input.value; 
         
@@ -35,8 +41,8 @@ function getCityWeather() {
             if(`${json.code}`=== undefined){
                 h2.innerText = json.message;
             }            
-            else{
-                localStorage.setItem("city", JSON.stringify(json));
+            else{                
+                data = json;              
                 console.log(localStorage);
                 temp = Math.round(json.main.temp);
                 console.log(json);            
@@ -86,7 +92,7 @@ localSearchBtn.addEventListener('click', ()=>{
     }
     
 });
-saveDataBtn.addEventListener('click', saveDataLocal);
+saveDataBtn.addEventListener('click',()=> saveDataLocal(data));
 
 function localSearch(city){
     const fs = require('fs');
@@ -102,8 +108,9 @@ function localSearch(city){
     }
     
 }
-function saveDataLocal(){
-    inputCcheck();
+function saveDataLocal(data){
+    localStorage.setItem("city",JSON.stringify(data));
+    savedLocal.innerHTML = 'Successfully Saved to Localstorage';
 }
 function removeNotice(){
     h2.innerHTML = ''
@@ -115,13 +122,25 @@ function inputCcheck(){
     }else
     return false;
 }
-function displayWeatherFromLocal(num){
-    temp = Math.round(weatherData.cities[num].temp);              
-    h2.innerText = `${weatherData.cities[num].name}`;
-    parCurrentTemp.innerHTML = temp + '°<span>C</span>';
-    weatherIcon = weatherData.cities[num].icon;
-    icon.innerHTML = `<img src="icons/${weatherIcon}.png"/>`;
-    parDescription.innerHTML = weatherData.cities[num].description;
+function displayWeatherFromLocal(){
+    console.log(localStorage);
+    if(city.main.name = input.value){
+        temp = Math.round(localStorage.getItem(city.temp));              
+        h2.innerText = `${localStorage.getItem.name}`;
+        parCurrentTemp.innerHTML = temp + '°<span>C</span>';
+        weatherIcon = weatherData.cities[num].icon;
+        icon.innerHTML = `<img src="icons/${weatherIcon}.png"/>`;
+        parDescription.innerHTML = weatherData.cities[num].description;
+    }else{
+        h2.innerText = input.value + ' is not saved in localstorage! ';
+        parCurrentTemp.innerHTML = '';
+        icon.innerHTML = '';
+        parDescription.innerHTML = '';
+        parSunrise.innerHTML = '';
+        parSunset.innerHTML = '';
+        parWind.innerHTML = '';
+    }
+    
 }
 //convert seconds to local time
 function convertTime(sec) {
