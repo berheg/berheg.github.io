@@ -13,7 +13,7 @@ let urlArray = [];
 //Json object is fetch and the data is passed to showImages function
 function getImage() {
   if(searchInput.value===''){
-    notice.innerHTML = 'Please insert value below!!!!';  
+    notice.innerHTML = 'Please insert word!!!!';  
   }else{
     const searchValue = searchInput.value
     console.log(searchValue);
@@ -34,6 +34,7 @@ function removeNotice(){
 };
 //showImages function saves the object as array and displays as image
 function showImages(objJson){
+  notice.innerHTML = '';
     urlArray = objJson.data.map(
     obj => obj.images.fixed_height.url);
     removeItems(imageContainer);
@@ -50,7 +51,8 @@ function showImages(objJson){
 }
 //removes search input value when we need
 function removeInputValue(){
-  numImages.value = ''
+  numImages.value = '';
+  
 }
 //removes search value
 function removeSearchValue(){
@@ -58,15 +60,16 @@ function removeSearchValue(){
 }
 //displays specified number of images 
 function showImagesWithLimit(){
-  if(numImages.value){
+  notice.innerHTML = '';
+  if(numImages.value <= 25){
     removeItems(imageContainer);
     for( i=0; i < numImages.value;i++){
       const image = document.createElement("img");
       image.setAttribute("src", urlArray[i]);
       imageContainer.appendChild(image);
-
     }
-  }  
+  }else
+    notice.innerHTML = 'Number < 26!!!!';  
 }
 //removes images from the screen when we need
 function removeItems(item) {
