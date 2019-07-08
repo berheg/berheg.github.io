@@ -68,8 +68,9 @@ function showImagesWithLimit(){
       image.setAttribute("src", urlArray[i]);
       imageContainer.appendChild(image);
     }
-  }else
-    notice.innerHTML = 'Number < 26!!!!';  
+  }else{
+    notice.innerHTML = 'Number < 26!!!!'; 
+  }     
 }
 //removes images from the screen when we need
 function removeItems(item) {
