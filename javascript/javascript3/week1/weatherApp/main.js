@@ -150,20 +150,7 @@ function convertTime(sec) {
       minute: "2-digit"
     });
   }
-/*function initMap() {
-    const location = {
-        lat: 55.76,
-        long: 12.58
-    }
-    const map = new google.maps.Map(document.getElementById('map'), {
-        center: location,
-        zoom: 8
-    });
-    const marker = new google.maps.Marker({
-        position: location,
-        map: map
-    })
-}*/  
+
 // SELECT ELEMENTS
 const iconElement = document.querySelector(".weather-icon");
 const tempElement = document.querySelector(".temperature-value p");
@@ -199,6 +186,13 @@ function setPosition(position){
     let longitude = position.coords.longitude;
     
     getWeather(latitude, longitude);
+    const mymap = L.map('map').setView([latitude, longitude], 15);
+    const attribution =
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+    const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    const tiles = L.tileLayer(tileUrl, { attribution });
+    tiles.addTo(map);
+    const marker = L.marker([lat, lon]).addTo(map);
 }
 
 // SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
