@@ -186,13 +186,13 @@ function setPosition(position){
     let longitude = position.coords.longitude;
     
     getWeather(latitude, longitude);
-    const mymap = L.map('map').setView([latitude, longitude], 15);
+    const map = L.map('map').setView([latitude, longitude], 15);
     const attribution =
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
     const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     const tiles = L.tileLayer(tileUrl, { attribution });
     tiles.addTo(map);
-    const marker = L.marker([lat, lon]).addTo(map);
+    const marker = L.marker([latitude, longitude]).addTo(map);
 }
 
 // SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
