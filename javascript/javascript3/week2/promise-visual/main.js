@@ -1,9 +1,11 @@
+//position declared as object
 const positions = {
     top: 20,
     botton: 300,
     left: 400,
     right: 20
   };
+  //anchor used to change the page requested
   const btn = document.querySelector('button.pageChange');
   const target = {
     red: {
@@ -34,10 +36,8 @@ function redBallMove(){
 }
 
 function translateAllAtOnce(){
-    //all at once
-    
+    //all at once    
     Promise.all([redBallMove(),blueBallMove(),greenBallMove()])
-
     .then(() => {
       console.log("All circles have moved");
       
@@ -46,7 +46,8 @@ function translateAllAtOnce(){
       document.location.reload(true);
     }, 2500); 
 }
-translateAllAtOnce();    
+//translateAllAtOnce(); 
+setInterval(translateAllAtOnce(), 1000);   
     
    
     
