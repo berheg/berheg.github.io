@@ -46,9 +46,9 @@ function translateOneByOne() {
         console.log("green circle has been moved");
         setTimeout(() => {
           document.location.reload(true);
-      }, 2500);
-      });       
+        }, 2500);
+      });      
     }    
-    translateOneByOne();
+    setInterval(translateOneByOne(), 2500); ;
     
     
