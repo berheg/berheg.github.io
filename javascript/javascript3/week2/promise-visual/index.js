@@ -4,7 +4,6 @@ const positions = {
     left: 400,
     right: 20
   };
-  const btn = document.querySelector('button.pageChange');
   const target = {
     red: {
       x: positions.right - parseInt(redBox.style.left),
@@ -45,7 +44,7 @@ function translateOneByOne() {
       .then(() => {
         console.log("green circle has been moved");
         setTimeout(() => {
-          document.location.reload(true);
+          document.location.reload(false);
         }, 2500);
       });      
     }    
