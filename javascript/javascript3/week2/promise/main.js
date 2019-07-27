@@ -1,7 +1,12 @@
 //Promise that resolves after  resolveAfter seconds
+const div = document.querySelector('div.logOutContainer');
 function setTimeoutPromise(resolveAfter){
     return new Promise(resolve => {
-        setTimeout(() => { resolve(console.log((`I am called asynchronously after ${resolveAfter} seconds`)));
+        setTimeout(() => { 
+          const p = document.createElement('p');
+          resolve(p.innerHTML = `I am called asynchronously after ${resolveAfter} seconds`,
+            console.log((`I am called asynchronously after ${resolveAfter} seconds`)));
+            div.appendChild(p);
     },resolveAfter*1000)        
     }),reject => reject(console.error(err));
 };
