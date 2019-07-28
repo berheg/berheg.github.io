@@ -1,12 +1,11 @@
+
 //position declared as object
 const positions = {
     top: 20,
     botton: 300,
     left: 400,
     right: 20
-  };
-  //anchor used to change the page requested
-  const btn = document.querySelector('button.pageChange');
+  };   
   const target = {
     red: {
       x: positions.right - parseInt(redBox.style.left),
@@ -43,7 +42,8 @@ function translateAllAtOnce(){
       
     });
     setTimeout(() => {
-      document.location.reload(true);
+     //document.location.reload(false);
+     location.replace("index.html");
     }, 2500); 
 }
 //translateAllAtOnce(); 
