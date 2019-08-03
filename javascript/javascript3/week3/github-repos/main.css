@@ -1,0 +1,19 @@
+body{
+    margin-left: 100px;
+}
+h1{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+}
+
+ul:nth-child(1){
+    font-family: 'Courier New', Courier, monospace;     
+    font-size: 20px;
+    list-style-type: decimal;
+}
+ul{
+    font-family: fantasy;
+    font-size: 30px;
+    list-style-type: upper-roman;
+}
