@@ -47,7 +47,7 @@ function translateAllAtOnce(){
     }, 2500); 
 }
 //translateAllAtOnce(); 
-setInterval(translateAllAtOnce(), 1000);   
+setInterval(() => translateAllAtOnce(), 1000);   
     
    
     
