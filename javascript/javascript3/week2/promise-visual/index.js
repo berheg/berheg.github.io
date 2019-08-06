@@ -49,6 +49,6 @@ function translateOneByOne() {
         }, 2500);
       });      
     }    
-    setInterval(translateOneByOne(), 2500); ;
+    setInterval(() => translateOneByOne(), 2500); ;
     
     
