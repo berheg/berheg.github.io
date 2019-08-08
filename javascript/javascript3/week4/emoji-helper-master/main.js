@@ -18,7 +18,7 @@ function fetchEmojis(){
 	})
 }
 function renderHTML(listOfEmojis, ulList = ulTag){	
-	ulList.innerHTML = ""
+	ulList.innerHTML = "";
 	listOfEmojis.forEach((emoji) => {
 		const liTag = document.createElement("li");
 		const emojiSpan = document.createElement("span");
@@ -27,7 +27,7 @@ function renderHTML(listOfEmojis, ulList = ulTag){
 		liTag.appendChild(emojiSpan);
 
 		const nameSpan = document.createElement("span");		
-		nameSpan.innerHTML = emoji.name
+		nameSpan.innerHTML = emoji.name;
 		nameSpan.classList.add("emojiName");		
 		liTag.appendChild(nameSpan);
 		//save to clipboard
@@ -59,9 +59,10 @@ function getCategoryLists(){
 }
 function getEmojisByCategory(){
 	let listOfEmojisPerCategory;
-	if(categorySelect.value === 'all')
+	if(categorySelect.value === 'all'){
 		listOfEmojisPerCategory = listOfEmojis;
-	else
+		renderHTML(listOfEmojisPerCategory);
+	}else
 		listOfEmojisPerCategory = searchEmoji(categorySelect.value, 'category');
 	return listOfEmojisPerCategory;
 }
