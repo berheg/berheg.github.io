@@ -101,3 +101,16 @@ section.cart ul>li {
 section.cart ul>li:nth-child(odd) {
     background-color: #f0f0f0;
 }
+.searchList{
+    margin-top: 0px;
+    width: 100px;
+    height: 200px;
+    z-index: -2;
+    position: absolute;
+    background-color: aqua;
+}
+.searchProductList{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
