@@ -2,8 +2,12 @@ const addBtn = document.querySelector('button.addBtn');
 const searchBtn = document.querySelector('button.searchBtn');
 const usernameP = document.querySelector('#username');
 const inputProduct = document.querySelector('input.product');
+const selectProductList = document.querySelector('ul.searchProductList');
+const searchInput = document.querySelector('input.searchInput');
+const selectListDiv = document.querySelector('div.searchList');
 let username;
 let userChecker = false; 
+let productLists = [];
 class Product {
   constructor(name, price, description) {
     this.name = name;
@@ -113,6 +117,9 @@ function clearList(parent){
 const flatscreen = new Product("flat-screen", 5000, 'Samsung 49" QLED smart ');
 const flatscreen2 = new Product("flat-screen2", 5000, 'Samsung TV UHD LED 65" ');
 const hpLaptop = new Product("hp-Laptop", 4000, 'HP 14-dk0002no 14" ');
+addProductLists(flatscreen);
+addProductLists(flatscreen2);
+addProductLists(hpLaptop);
 
 const shoppingCart = new ShoppingCart([]);
 shoppingCart.addProduct(flatscreen);
@@ -123,7 +130,7 @@ shoppingCart.getUser();
 console.log(username);
 shoppingCart.renderProducts();
 addBtn.addEventListener('click', addToProduct);
-searchBtn.addEventListener('click', addShoppingCart);
+//searchBtn.addEventListener('click', addShoppingCart);
 function addToProduct(){
   //const inputProduct = document.querySelector('input.product');
   console.log(inputProduct.Value);
@@ -152,13 +159,35 @@ function addShoppingCart(product){
   const ul = document.querySelector("section.cart > ul");    
     const li = document.createElement("li");
     li.appendChild(creatListsInsideUl(product)) ;
-    ul.appendChild(li);
+   
 }
 function creatUlShippingCart(productList){
   const ul = document.querySelector("section.cart > ul");
-  for (const product of productList)  {
+  for (let product of productList)  {
     const li = document.createElement("li",'name',product.name);
     li.innerHTML = product.name               
-    ul.appendChild(li);
+    
   }
+  ul.appendChild(li);
 };
+//searchBtn.addEventListener('keyup',inputEventHandler);
+searchInput.addEventListener('keyup',inputEventHandler);
+function inputEventHandler(){
+  selectListDiv.style.zIndex = 8;
+  const listToSelect = searchProductList(searchInput.value);
+  for(let product of listToSelect){
+    const listSelect = document.createElement('li');
+    listSelect.innerHTML = product.name;
+    selectProductList.appendChild(listSelect);
+  }
+}
+function searchProductList(searchKey){
+  console.log(productLists);
+  const searchedList = productLists.filter((product) =>{
+    return product.name.toLowerCase().includes(searchKey.toLowerCase())});
+  console.log(searchedList);
+  return searchedList;
+}
+function addProductLists(product){
+  productLists.push(product);
+}
