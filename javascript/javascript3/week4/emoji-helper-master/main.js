@@ -1,3 +1,7 @@
+/*
+*Emoji search site JS
+*
+*/
 console.log("Script loaded");
 const searchField = document.getElementById("searchField");
 const ulTag = document.querySelector("ul.container");
@@ -5,6 +9,7 @@ const ulFavoriteList = document.querySelector('ul.favoriteUl');
 const categorySelect = document.querySelector('select#selectCategories');
 let listOfEmojis;
 let favoriteEmojis = [];
+//fetch json data from url
 function fetchEmojis(){
 	fetch("https://raw.githubusercontent.com/amio/emoji.json/master/emoji.json")
 	.then(response => response.json())
@@ -17,6 +22,7 @@ function fetchEmojis(){
 		renderHTML(listOfEmojis);
 	})
 }
+//renders lists of emojis in the specified ul
 function renderHTML(listOfEmojis, ulList = ulTag){	
 	ulList.innerHTML = "";
 	listOfEmojis.forEach((emoji) => {
@@ -38,7 +44,7 @@ function renderHTML(listOfEmojis, ulList = ulTag){
 		ulList.appendChild(liTag);
 	})
 }
-
+//searches emoji based on the given search option
 function searchEmoji(searchValue, searchOption){
     const newListOfEmojis = listOfEmojis.filter((emoji) => {
 		return emoji[searchOption].toLowerCase().includes(searchValue.toLowerCase());
@@ -47,6 +53,7 @@ function searchEmoji(searchValue, searchOption){
 	renderHTML(newListOfEmojis);
 	return newListOfEmojis;
 }
+//get category lists for the select list
 function getCategoryLists(){
 	let listsOfCategory = [];
 	listOfEmojis.forEach(emoji => {
@@ -57,6 +64,7 @@ function getCategoryLists(){
 	});
 	return listsOfCategory;
 }
+//get emoji lists based on the given category
 function getEmojisByCategory(){
 	let listOfEmojisPerCategory;
 	if(categorySelect.value === 'all'){
@@ -66,6 +74,7 @@ function getEmojisByCategory(){
 		listOfEmojisPerCategory = searchEmoji(categorySelect.value, 'category');
 	return listOfEmojisPerCategory;
 }
+//gives lists of tag to be displayed on the select list
 function getOptionTagForEachCategory(){
 	const categoryLists = getCategoryLists();
 	categoryLists.forEach(category => {
@@ -74,21 +83,24 @@ function getOptionTagForEachCategory(){
 		categorySelect.appendChild(optionCategory);
 	});
 }
+//event listener for the select object
 categorySelect.addEventListener('change', () => {
 	console.log(categorySelect.value);
 	searchField.value = categorySelect.value;
 	console.log(getEmojisByCategory());		
 });
+//add emoji to favoriteEmojis array 
 function addToFavorite(emoji){
 	favoriteEmojis.unshift(emoji);
 	console.log(favoriteEmojis);
 	favoriteEmojis = favoriteEmojis.filter((emoji, index) => {
 		return favoriteEmojis.indexOf(emoji) == index;
 	});
-
+	//saving favoriteEmojis array to localstorage
 	localStorage.setItem("favoriteEmojis", JSON.stringify(favoriteEmojis));
 	renderHTML(favoriteEmojis, ulFavoriteList);
 }
+//emoji click event handler
 function emojiClickEventHandler(emoji){
 	writeToClipboard(emoji.char);
 	addToFavorite(emoji);
@@ -99,6 +111,8 @@ function loadingLocalstorage(){
         localStorage.getItem("favoriteEmojis") || "[]"
       );
 }
+//searchField  keyup event listener
 searchField.addEventListener("keyup",() => searchEmoji(searchField.value,'name'));
+//searchField focus event listener
 searchField.addEventListener("focus",() => searchField.value = '');
 fetchEmojis();
