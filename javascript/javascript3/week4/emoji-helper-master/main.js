@@ -28,14 +28,22 @@ function renderHTML(listOfEmojis, ulList = ulTag){
 	listOfEmojis.forEach((emoji) => {
 		const liTag = document.createElement("li");
 		const emojiSpan = document.createElement("span");
-		emojiSpan.innerHTML = emoji.char
+		setTimeout(() => {
+			emojiSpan.innerHTML = emoji.char
+		}, 0);
+		
 		emojiSpan.classList.add("emoji");
 		liTag.appendChild(emojiSpan);
-
-		const nameSpan = document.createElement("span");		
-		nameSpan.innerHTML = emoji.name;
+		
+		const nameSpan = document.createElement("span");
+		setTimeout(() => {		
+			nameSpan.innerHTML = emoji.name;
+		}, 0);
 		nameSpan.classList.add("emojiName");		
 		liTag.appendChild(nameSpan);
+			
+		
+		
 		//save to clipboard
 		liTag.addEventListener('click', () => {
 			emojiClickEventHandler(emoji);
