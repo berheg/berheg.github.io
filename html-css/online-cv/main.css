@@ -1,0 +1,119 @@
+ body{
+     background-color: #ffffff;
+     margin-top: 0px;
+     font-family: TT Commons,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+     display: flex;
+     flex-direction: column;
+ }          
+ h1 {
+    text-align: center;
+}
+img {
+    width: 100px;
+   height: 100px;
+   margin-right: 20px;
+   border-radius: 50%;
+   margin-top: 50px;
+}
+.name {
+    margin-left: 20px;
+    color: rgb(19, 190, 119);
+}
+.pdf-section{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    height: 100%;
+}
+aside {
+    background-color: #156155 ;   
+    margin-top: 0em;    
+    margin-right: 40px;
+    padding-left: 5rem;   
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    width: 25%;
+    margin-right: 50px;  
+    color: floralwhite;
+    border-radius: 5px; 
+    height: 100%;
+}
+.maincv{    
+    font-family: 'Courier New', Courier, monospace;
+    width: 55%;
+    background-color: #ffffff;
+}
+.progressbar{
+    width: 80%;
+    height: 5px;
+    background-color: rgb(15, 14, 14);
+    margin-top: 0px;
+}
+progress::-webkit-progress-value {
+    background-color: rgb(245, 240, 240) !important;
+}
+footer {
+    clear: both;
+    align-content:center;
+    margin-left: 25%;    
+}
+footer a {
+    margin-left: 50px;
+    font-size: 40px;
+    color: blue;
+}
+p a,a{
+    font-size: 14px;
+    margin-left: 0px;
+    color: rgb(156, 206, 21);
+}
+.work p{
+    font-weight: bold;
+}
+.work a{
+    font-size: 16px; 
+    margin-left: 0;   
+}
+ul{    
+    padding: 0px;
+}
+li{
+    list-style: none;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-left: 0px;
+}
+.card-panel{
+    height: 80px;
+    margin-bottom: 0em;  
+}
+.red.darken-2 {
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+    border-radius: 10px;
+    height: 50px;
+    background-color: #4ad32f;     
+}
+/*---Media Query for Mobile phone---*/
+@media only screen and (max-width: 1000px){
+    body{
+        margin-left: 50px;
+        width: 100%;        
+        display: block;        
+    }
+    aside,.let-box{
+        width: 60%;
+        max-width: 300px;
+        float: none;
+        align-self: center;
+    }
+    .pdf-section{
+        flex-direction: column;
+    }
+}
