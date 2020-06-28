@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Facebook Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="form.css" />
+  </head>
+  <body>
+    <section class="sign-up">
+      <!-- html here -->
+      <form action="https://telmore.dk" method="GET">
+        <article>
+          <h1>Sign Up</h1>
+          <p>It's quick and easy.</p>
+        </article>
+        <section class="user-name">
+          <input class = "first-name" id="first-name" placeholder="First Name" aria-label="First Name" aria-value="required" required/>
+          <input class="last-name"id="last-name" placeholder="Last Name" aria-label="Last Name" aria-value="required" required/>
+        </section>
+        <input type ="tel" class ="mobil-email" id="mobil-email" placeholder="Mobile Number or email"/>
+        <input type="password" class ="password" id="password" placeholder="New Password"/>
+        <fieldset>
+          <legend>Birthday</legend>
+            <select class="birthday" name="birthday">
+              <option value="0">Day</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+            </select>
+            <select class="birthday" name="birthday">
+              <option value="Month">Month</option>
+              <option value="January">Jan</option>
+              <option value="Feburary">Feb</option>
+              <option value="March">Mar</option>
+            </select>
+            <select class="birthday" name="birthday">
+              <option value="Year">Year</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+            </select>
+            <button class="help-btn">?</button>
+        </fieldset>
+        <fieldset>
+          <legend>Gender</legend>
+          <section class="gender-control">
+            <input type="radio" name="gender" />
+            <label>Female</label>
+            <input type="radio" name="gender" />
+            <label>Male</label>
+            <input type="radio" name="gender" />
+            <label>Custom</label>
+            <button class="help-btn">?</button>
+          </section>
+        </fieldset>
+        <p class="term-agreement">By clicking Sign Up, you agree with our terms.</p>
+        <button type="submit" class="submit-button">Sign Up</button>
+      </form>
+    </section>
+  </body>
+</html>

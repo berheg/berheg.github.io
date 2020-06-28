@@ -1,0 +1,88 @@
+
+body{
+  display: flex;
+  justify-content: center;
+}
+h1{
+  font-family: inherit;
+  font-weight: 600px;
+  font-size: 40px;
+  margin-bottom: 0px;
+}
+p{
+  font-size: 20px;
+}
+p.term-agreement{
+  color: #777;
+  font-size: 11px;
+  width: 316px;
+}
+.sign-up {
+  width: 40%;
+  height: 550px;
+  background-color: whitesmoke;
+  display: block;
+  margin: 10px;
+}
+form{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 15px;
+}
+input{
+  font-size: 18px;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 10px;
+  border-color: #bdc7d8;
+  border-radius: 5px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.first-name,
+.last-name{
+  width: 200px;
+  height: 25px;
+
+}
+.mobil-email,
+.password{
+  width: 430px;
+  height: 25px;
+}
+select{
+  width: 50px;
+  height: 25px;
+}
+button.submit-button{
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  background: linear-gradient(#67ae55, #578843);
+  background-color: #69a74e;
+  box-shadow: inset 0 1px 1px #a4e388;
+  border-color: #3b6e22 #3b6e22 #2c5115;
+  border: 1px solid;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 1px;
+  position: relative;
+  text-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+button.help-btn{
+  border-radius: 100%;
+  color:white;
+  background-color: #555555;
+  text-decoration: none;
+}
+fieldset{
+  width:425px;
+}
