@@ -6,23 +6,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign up form</title>
         <link rel="stylesheet" type="text/CSS" href="main.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">  
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 
     </head>
     <body>
         <header>
             <img src="./asset/images/logo10.jpg" alt="Logo of the company"
             />
-            <nav class="navbar">                    
-                <a href="#">Home</a>                
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#">Sign up</a>
+            <nav class="navbar">
+                <a href="form.html">Home</a>
+                <a href="form2.html">About</a>
+                <a href="form3.html">Contact</a>
+                <a href="form4.html">Sign up</a>
             </nav>
-        </header>    
+        </header>
         <div>
             <h1>Sign up to yourcustometailor.com</h1>
-        </div>  
+        </div>
         <form action="confirmatiom.html" method="GET" class="form">
             <div>
                 <h2>Step 4/4 - how can we reach you?</h2>
@@ -32,21 +32,21 @@
                 <p>Please fill in your payment data</p>
                 <table class="form-item">
                     <tr>
-                        <td>                            
+                        <td>
                             <label for="singup-nameoncard">
                                 Name on Card*
                             </label>
                         </td>
                         <td>
                             <input
-                                type="text" required class="boxcontainer"                                
+                                type="text" required class="boxcontainer"
                                 id="singup-nameoncard"
-                                name="nameoncard"                          
+                                name="nameoncard"
                             />
                         </td>
                     </tr>
                     <tr>
-                        <td>                
+                        <td>
                             <label for="nameofcard">
                                     Card type
                             </label>
@@ -56,8 +56,8 @@
                                 <option value="none"> </option>
                                 <option value="Master">Master card</option>
                                 <option value="visa">Visa card</option>
-                                <option value="cridt">Cridt Card</option>                          
-                            </select>              
+                                <option value="cridt">Cridt Card</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -72,8 +72,8 @@
                                 pattern="[0-9]" size="16"
                                 minlength="16" maxlength="16"
                                 id="singup-criditcardnumber"
-                                name="criditcardnumber"                          
-                            />                               
+                                name="criditcardnumber"
+                            />
                         </td>
                     <tr>
                         <td>
@@ -85,7 +85,7 @@
                             <input
                                 type="text" required class="boxcontainer"
                                 id="singup-firstname"
-                                name="firstname"                          
+                                name="firstname"
                             />
                         </td>
                     </tr>
@@ -101,7 +101,7 @@
                             <input
                                 type="number" required class="smallbox"
                                 id="singup-expairymonth"
-                                name="expairymonth"                          
+                                name="expairymonth"
                             />
                         </td>
                     </tr>
@@ -117,10 +117,10 @@
                                 pattern="[0-9]"
                                 minlength="3" maxlength="3"
                                 id="singup-ccv"
-                                name="ccv"                          
+                                name="ccv"
                             />
                         </td>
-                    </tr>                    
+                    </tr>
                 </table>
                 <table>
                     <tr>
@@ -133,7 +133,7 @@
                             <input
                                 type="number" required class="smallbox"
                                 id="singup-expairyyear"
-                                name="expairyyear"                          
+                                name="expairyyear"
                             />
                         </td>
                     </tr>
@@ -141,8 +141,8 @@
                 <div class="navbottom">
                     <button><a class="nextstep" href="form3.html">back</a></button>
                     <button class="nextstep">Submit</button>
-                </div>                    
-            </div>             
+                </div>
+            </div>
         </form>
     </body>
 </html>
