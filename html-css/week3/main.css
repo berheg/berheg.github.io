@@ -1,6 +1,6 @@
 /*---------Css code for form.html Week3-----------'/
 /* ******************************************************
-Style Sheet for Hack Your Future, HTML-CSS, homework Week3 
+Style Sheet for Hack Your Future, HTML-CSS, homework Week3
 Designer: Girmay Hailu
 ********************************************************* */
 /*--body for all pages--*/
@@ -8,7 +8,7 @@ body{
     margin-left: 200px;
     width: 80%;
     justify-content: center;
-      
+    align-items: center;
 }
 /*--Header for all pages*/
 header{
@@ -28,9 +28,9 @@ nav{
     border: 10px;
     border-color: black;
     background-color: rgb(211, 209, 206);
-    text-align: center; 
+    text-align: center;
     margin-right: 200px;
-    padding-top: 20px;  
+    padding-top: 20px;
 }
 /*Menu of the navigation bar style*/
 .navbar{
@@ -61,14 +61,14 @@ form{
     0% {
         width: 100px;
     }
-    
+
     100% {
         width: 100%;
     }
 }
 .inputsection{
     display: flex;
-    flex: row;    
+    flex: row;
     margin-top: 20px;
     flex-wrap: wrap;
     justify-content: center;
@@ -79,14 +79,14 @@ form{
     margin-top: 20px;
     width: 200px;
     height: 30px;
-    
+
 }
 .selectcountry{
     margin-top: 30px;
     margin-bottom: 30px;
 }
 .selectcountry label{
-    margin-left: 200px;    
+    margin-left: 200px;
 }
 .formitem label{
     margin-right: 30px;
@@ -94,17 +94,17 @@ form{
 .navbottom{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;    
-    
+    justify-content: flex-end;
+
 }
 textarea{
     width: 600px;
-    height: 150px;  
-    
+    height: 150px;
+
 }
 .description {
     margin-top: 50px;
-    
+
 }
 .description p{
     font-size: 10px;
@@ -129,12 +129,12 @@ ul{
 input[type=checkbox]:checked ~ .shipping-toggle {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
   }
 
 a{
-    text-decoration: none; 
-    margin-top: 30px;   
+    text-decoration: none;
+    margin-top: 30px;
 }
 /*---form2 additional css ----*/
 button{
@@ -150,7 +150,7 @@ button{
     width: 50%;
 }
 #signup-phone{
-    
+
     float: right;
 }
 .righttable{
@@ -194,28 +194,33 @@ button{
 @media only screen and (max-width: 600px){
     body{
         margin-left: auto;
-        width: 100%;        
-          
+        width: 100%;
+
     }
     /*--Header for all pages*/
-    header{        
+    header{
         flex-direction: column;
         justify-content: space-between;
     }
+    img{
+      width: 30%;
+    }
     /*Menu of the navigation bar style*/
-    .navbar{   
+    .navbar{
         flex-direction: column;
         justify-content: space-around;
     }
     /*-- part of the navigation section of all pages --*/
 nav{
     width: auto;
-    height: auto;    
-    margin-right: auto;    
+    height: auto;
+    margin-right: auto;
+    width: 50%;
+    justify-content:space-around;
 }
     /*form style for the whole pages*/
     form{
-        width: 100%;        
-    }    
+        width: 100%;
+    }
 
 }
